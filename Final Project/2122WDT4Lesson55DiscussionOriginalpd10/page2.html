@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />	
+    <link href="c3-eb4b9be8.css" rel="stylesheet" type="text/css" />
+    <script src="d3-5.8.2.min-c5268e33.js"></script>
+    <script src="c3.min-d2a1f852.js"></script>
+    <script src="helper.js"></script>
+    <script src="script2.js"></script>
+
+	<style>
+	nav{
+        display: flex;         
+        justify-content: space-evenly;
+        padding: 10px;         
+        background-color: #333;
+      }
+
+      nav a{
+        color: white;          
+        text-decoration: none; 
+        font-size: 18px;      
+        padding: 10px;        
+      }
+
+      nav a:hover{
+        background-color: #555; 
+        border-radius: 5px;   
+    }
+	html,body{
+		margin:0 auto;
+		font-family:Arial;
+	}
+	.container{
+		display:flex;
+		padding:10px;
+	}
+	.center{
+		justify-content:center;
+		align-items:center;
+	}
+
+	.subbanner{
+		background-color:rgb(200,225,255);
+	}
+	#banner{
+		background-color:blue;
+		color:white;
+	}
+	#footer{
+		background-color:cornflowerblue;
+		color:white;
+		/*position:fixed;*/
+		left: 0;
+		right: 0;
+		bottom:0px;
+	}
+ 
+	.card{
+		flex:1;
+		margin:10px;
+		padding:10px;
+		border:1px solid gray;
+		text-align:center;
+	}
+
+	.highlight{
+		font-style:italic;
+		color:blue;
+	}
+	.heading{
+		font-weight:bold;
+	}
+	.button{
+		text-decoration:none;
+		background-color:blue;
+		color:white;
+		border-radius:4px;
+		padding:6px;
+		box-shadow:2px 2px 2px black;
+	}
+	.button:hover{
+		background-color:cornflowerblue;
+	}
+	#panel{
+		flex:1;
+	}
+	.flash{
+		max-width:200px;
+	}
+	.card img{
+		height:100px;
+	}
+	#output{
+		flex-wrap:wrap;
+	}
+	</style>
+   </head>
+   <nav>
+      <a href="index.html">HomePage</a>
+      <a href="page1.html">InfoPage</a>
+      <a href="page2.html">AnalysisPage</a>
+	</nav>
+  <body onload="init()">
+
+    <div id="banner" class="container center">
+      <h1> Analysis Page </h1>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This page will show the charts with datas.</p>
+       </div>
+    </div>
+    <div class="container">
+      <div id="panel">
+        <div class="card">
+          <h3>Select Chart Type</h3>
+          <select id="chartType" style="width:200px;">
+            <option value="bar">Select Chart Type</option>
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+          </select>
+        </div>
+        <div class="card">
+          <h3>Restaurants by Borough</h3>
+          <p><span class="highlight">Display:</span> Creating a chart that displays the number of restaurants in that borough.</p>
+          <a class="button" onclick="restaurantByBorough()"> Display </a>
+        </div>
+      </div>
+      <div class="card">
+       <div id="chart"></div>
+      </div>
+    </div>

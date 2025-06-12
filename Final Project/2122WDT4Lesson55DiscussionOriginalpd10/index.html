@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="components.css" rel="stylesheet" type="text/css" />
+	<style>
+		nav{
+        display: flex;         
+        justify-content: space-evenly;
+        padding: 10px;         
+        background-color: #333;
+      }
+
+      nav a{
+        color: white;          
+        text-decoration: none; 
+        font-size: 18px;      
+        padding: 10px;        
+      }
+
+      nav a:hover{
+        background-color: #555; 
+        border-radius: 5px;   
+      }
+	</style>
+    <script src="components.js"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">HomePage</a>
+      <a href="page1.html">InfoPage</a>
+      <a href="page2.html">AnalysisPage</a>
+	</nav>
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1> Home Page </h1>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This page will demonstrate and briefly give an overview of what an restaurant inspection is, a brief overview of what the department of transportation do and guide you around the websites. The data is also provided by the NYC open data website which you can find by typing in restaurant inspection. The information page is to display the addresses and the information about those restaurant and what the complaints are for and handled by.</p>
+       </div>
+    </div>
+
+    <h2> Overview </h2>
+    <div class="container">
+      <div class="card" id="modal1"></div>
+      <div class="card" id="modal2"></div>
+      <div class="card" id="modal3"></div>
+    </div>

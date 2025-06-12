@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		nav{
+        display: flex;         
+        justify-content: space-evenly;
+        padding: 10px;         
+        background-color: #333;
+      }
+
+      nav a{
+        color: white;          
+        text-decoration: none; 
+        font-size: 18px;      
+        padding: 10px;        
+      }
+
+      nav a:hover{
+        background-color: #555; 
+        border-radius: 5px;   
+      }
+	  .container{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly
+      }
+	</style>
+    <script src="data.js"></script>
+    <script src="script1.js"></script>
+   </head>
+  <body onload='init()'>
+    <nav>
+      <a href="index.html">HomePage</a>
+      <a href="page1.html">InfoPage</a>
+      <a href="page2.html">AnalysisPage</a>
+	</nav>
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1> Information Page</h1>
+      </div>
+    </div>
+    <div class="container subbanner">
+      <div>
+        <p>This page is the information page. You enter in the borough and it'll show you all the restaurant inspection that happened in the borough and the restaurant information. </p>
+
+
+      <div class="container">
+        <div>
+          <input type = "text" id='borough' placeholder='Enter borough'>
+          <input type = "button" onclick="findBorough()" value="Search">
+        </div>
+      </div>
+
+       
+    </div>
+    <div id="output" class="container">
+ 
+
+    </div>
+
+  </body>
+</html>
